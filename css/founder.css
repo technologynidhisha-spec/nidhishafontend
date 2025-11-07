@@ -1,0 +1,241 @@
+/* Simple and Clean Founder Section */
+.founder-section {
+    padding: 80px 20px;
+    background: transparent;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.founder-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Header */
+.founder-header {
+    margin-bottom: 60px;
+}
+
+.founder-section-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Founder Grid */
+.founder-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Founder Cards */
+.founder-card {
+    background: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 280px;
+    height: 420px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.founder-section.visible .founder-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.founder-section.visible .founder-card:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.founder-section.visible .founder-card:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.founder-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: #007bff;
+}
+
+/* Founder Photo */
+.founder-photo {
+    margin-bottom: 20px;
+}
+
+.founder-image-placeholder {
+    width: 100%;
+    height: 280px;
+    margin: 10px auto 15px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.founder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Founder Info */
+.founder-info {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 80px;
+    padding-top: 10px;
+}
+
+.founder-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.founder-role {
+    font-size: 14px;
+    color: #12caf8;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    display: block;
+    visibility: visible;
+}
+
+.founder-link {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    line-height: 1.2;
+    margin-top: 5px;
+}
+
+.founder-link:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+/* Hover Effects */
+.founder-card:hover .founder-image-placeholder {
+    transform: scale(1.05);
+}
+
+.founder-card:hover .founder-image {
+    transform: scale(1.02);
+}
+
+.founder-card:hover .founder-name {
+    color: #007bff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .founder-section {
+        padding: 60px 15px;
+    }
+    
+    .founder-section-title {
+        font-size: 36px;
+    }
+    
+    .founder-grid {
+        gap: 30px;
+        padding: 0 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .founder-card {
+        width: 280px;
+        height: 400px;
+        padding: 15px;
+    }
+    
+    .founder-image-placeholder {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 15px;
+    }
+    
+    .founder-initial {
+        font-size: 40px;
+    }
+    
+    .founder-name {
+        font-size: 16px;
+    }
+    
+    .founder-role {
+        font-size: 12px;
+    }
+    
+    .founder-link {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .founder-section {
+        padding: 40px 10px;
+    }
+    
+    .founder-section-title {
+        font-size: 28px;
+    }
+    
+    .founder-header {
+        margin-bottom: 40px;
+    }
+    
+    .founder-card {
+        width: 250px;
+        height: 350px;
+        padding: 10px;
+    }
+    
+    .founder-image-placeholder {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+    
+    .founder-initial {
+        font-size: 32px;
+    }
+    
+    .founder-name {
+        font-size: 18px;
+    }
+    
+    .founder-role {
+        font-size: 13px;
+    }
+} 

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIDHISHA TECHNOLOGIES </title>
+    <link rel="icon" type="image/png" href="image/logo.png" sizes="512x512">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/founder.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    
+    <!-- Three.js Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <div class="logo-icon">
+                          <img src="image/logo.png" alt="Logo" class="logo-img">
+
+                        <div class="logo-glow"></div>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">NIDHISHA</span>
+                        <span class="logo-subtitle">TECHNOLOGIES</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                     <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link">IT Services </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html" class="dropdown-link">Enterprise Solutions</a></li>
+                            <li><a href="cloud.html" class="dropdown-link">Cloud Consulting</a></li>
+                            <!-- Add more services here in the future -->
+                        </ul>
+                    </li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Contact -->
+            <div class="contact">
+                <a href="tel:+918049744072" class="contact-btn">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <!-- <span class="contact-text">+91 8049744072</span> -->
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <span class="mobile-logo-icon">
+                           <img src="image/logo.png" alt="Logo" class="logo-img-mob">
+                    </span>
+                    <span class="mobile-logo-text">NIDHISHA</span>
+                </div>
+                <button class="mobile-close-btn" aria-label="Close mobile menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-menu">
+                    <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                    <li><a href="solutions.html" class="mobile-nav-link">Solutions</a></li>
+                    <li><a href="products.html" class="mobile-nav-link">IT Services</a></li>
+                    <li><a href="#about" class="mobile-nav-link">About</a></li>
+                    <li><a href="solutions.html#blog" class="mobile-nav-link">Blog</a></li>
+                    <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-contact">
+                <a href="tel:+918049744072" class="mobile-contact-btn">
+                    <svg class="mobile-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span class="mobile-contact-text">+91 8049744072</span>
+                </a>
+            </div>
+        </div> 
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');">
+            <div class="carousel-content">
+                <h1>Building Tomorrow's Technology Leaders</h1>
+            </div>
+        </div>
+        
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="carousel-content">
+                <h1>Empowering Businesses Through Innovation</h1>
+            </div>
+        </div>
+        
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="carousel-content">
+                <h1>Leading with Strategy, Creativity, and Technology</h1>
+            </div>
+        </div>
+        
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="carousel-content">
+                <h1>Innovation Drives Us, Success Defines You</h1>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <button class="carousel-arrow carousel-prev">‹</button>
+        <button class="carousel-arrow carousel-next">›</button>
+        
+        <div class="carousel-nav">
+            <div class="carousel-dot active"></div>
+            <div class="carousel-dot"></div>
+            <div class="carousel-dot"></div>
+            <div class="carousel-dot"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Web Development</h3>
+                    <p class="feature-description">Custom web applications built with modern technologies and best practices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile Apps</h3>
+                    <p class="feature-description">Native and cross-platform mobile applications for iOS and Android.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">Cloud Solutions</h3>
+                    <p class="feature-description">Scalable cloud infrastructure and deployment solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>NIDHISHA TECHNOLOGY PRIVATE LIMITED is a leading technology company specializing in innovative software solutions. We combine cutting-edge technology with creative design to deliver exceptional digital experiences.</p>
+                    <p>Our team of experts is dedicated to transforming ideas into reality, helping businesses thrive in the digital age through custom software development, mobile applications, and cloud solutions.</p>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="founder-header">
+            <h2 class="founder-section-title">Our Founding Members</h2>
+        </div>
+        <div class="founder-grid">
+            <div class="founder-card" data-founder="akshay">
+                <div class="founder-photo">
+                    <div class="founder-image-placeholder">
+                        <img src="image/i1.jpeg" alt="Nand Kishore Soni - Director" class="founder-image">
+                    </div>
+                </div>
+                <div class="founder-info">
+                    <h3 class="founder-name">Abhimanyu Nahar</h3>
+                    <p class="founder-role">Director</p>
+                 </div>
+            </div>
+            <div class="founder-card" data-founder="akshay-2">
+                <div class="founder-photo">
+                    <div class="founder-image-placeholder">
+                        <img src="image/i2.jpeg" alt="Abhimanyu Nahar - Director" class="founder-image">
+                    </div>
+                </div>
+                <div class="founder-info">
+                    <h3 class="founder-name">Nand Kishore Soni</h3>
+                    <p class="founder-role">Director</p>
+ 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="Blog Post 1" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">The Future of Web Development</h3>
+                        <p class="blog-excerpt">Explore the latest trends and technologies shaping the future of web development.</p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Blog Post 2" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Mobile App Development Trends</h3>
+                        <p class="blog-excerpt">Discover the latest innovations in mobile app development and user experience.</p>
+                        <a href="#" class="blog-link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section contact-section">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <img src="image/logo.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="footer-logo-text">
+                        <h3>NIDHISHA TECHNOLOGY</h3>
+                        <p>PRIVATE LIMITED</p>
+                    </div>
+                </div>
+                <p class="footer-description">Empowering businesses with innovative technology solutions and cutting-edge software development services.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.928.875 1.418 2.026 1.418 3.323s-.49 2.448-1.418 3.244c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781c-.49 0-.928-.175-1.297-.49-.368-.315-.49-.753-.49-1.243 0-.49.122-.928.49-1.243.369-.315.807-.49 1.297-.49s.928.175 1.297.49c.368.315.49.753.49 1.243 0 .49-.122.928-.49 1.243-.369.315-.807.49-1.297.49z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="solutions.html#solutions-grid">Web Development</a></li>
+                    <li><a href="solutions.html#solutions-grid">Mobile Applications</a></li>
+                    <li><a href="solutions.html#solutions-grid">Cloud Solutions</a></li>
+                    <li><a href="solutions.html#solutions-grid">Digital Transformation</a></li>
+                    <li><a href="solutions.html#solutions-grid">IT Consulting</a></li>
+                    <li><a href="solutions.html#solutions-grid">Software Testing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#blog">Our Blog</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section contact-info-section">
+                <h3>Get In Touch</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Address</h4>
+                        <p>2774/2775 21st Main Road <br> HSR Layout, Sector 1 (opp. KA-01 RTO) <br>Bangalore , Karnataka<br>India - 560102</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:info@nidhishatechnologies.com">info@nidhishatechnologies.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:+918049744072">+91 8049744072</a>
+                        <span class="phone-type">(Landline)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2024 NIDHISHA TECHNOLOGY PRIVATE LIMITED. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/founder.js"></script>
+    <script src="js/three-background.js"></script>
+</body>
+</html> 
